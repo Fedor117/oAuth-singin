@@ -14,7 +14,13 @@
             <label for="tabbed1">Create</label>
         </h1>
         <div>
-            Тут вставляем формочку и прочий шлак. Каждая формочка работает со своим сервлетом, наверное.
+            <p><h3>Введите определение</h3>
+            <input type="text" name="name" />
+            <p><h3>Введите описание</h3>
+            <input type="text" name="description" />
+            <p>
+                <input type="submit" name="Submit" value="Создать новую запись" />
+            </p>
         </div>
     </section>
     <input name="tabbed" id="tabbed2" type="radio">
@@ -23,7 +29,11 @@
             <label for="tabbed2">Read</label>
         </h1>
         <div>
-
+            <p><h3>Введите определение</h3>
+            <input type="text" name="name" />
+            <p>
+                <input type="submit" name="Submit" value="Получить описание" />
+            </p>
         </div>
     </section>
     <input name="tabbed" id="tabbed3" type="radio">
@@ -32,7 +42,13 @@
             <label for="tabbed3">Update</label>
         </h1>
         <div>
-
+            <p><h3>Введите определение</h3>
+            <input type="text" name="name" />
+            <p><h3>Введите описание</h3>
+            <input type="text" name="description" />
+            <p>
+                <input type="submit" name="Submit" value="Обновить запись" />
+            </p>
         </div>
     </section>
     <input name="tabbed" id="tabbed4" type="radio">
@@ -41,7 +57,12 @@
             <label for="tabbed4">Delete</label>
         </h1>
         <div>
-
+            <p>
+            <h3>Введите определение</h3>
+            <input type="text" name="name" />
+            <p>
+                <input type="submit" name="Submit" value="Удалить запись" />
+            </p>
         </div>
     </section>
 </div>
