@@ -30,6 +30,22 @@ public class CreationServlet extends HttpServlet {
         operation.requestToDb(name, description);
 
         PrintWriter out = resp.getWriter();
-        out.println("<br>Operation completed</br>");
+        out.println(
+                "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" +" +
+                        "http://www.w3.org/TR/html4/loose.dtd\">\n" +
+                        "<html> \n" +
+                        "<head> \n" +
+                        "<meta http-equiv=\"Content-Type\" content=\"text/html; " +
+                        "charset=ISO-8859-1\"> \n" +
+                        "<title> Ответ на запрос " + name + " </title> \n" +
+                        "</head> \n" +
+                        "<body> <div align='center'> \n" +
+                        "<style= \"font-size=\"12px\" color='black'\"" + "\">" +
+                        "Запрос: " + name + " <br> " +
+                        "Определение: " + description +
+                        "Записть создана." +
+                        "</font></body> \n" +
+                        "</html>"
+        );
     }
 }

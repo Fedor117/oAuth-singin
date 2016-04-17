@@ -10,8 +10,12 @@ import java.sql.Statement;
  */
 public class DbConnection {
 
-    public  static           Connection   connection;
-    private static volatile  DbConnection instance;
+    private static final String PATH_TO_DB =
+            "C:\\Users\\Phodor\\workspace\\JSP-Servlets\\db\\local_nets_db.db";
+
+    public  static          Connection   connection;
+    private static volatile DbConnection instance;
+
 
     private DbConnection() {
 
@@ -34,7 +38,7 @@ public class DbConnection {
         connection = null;
         try {
             Class.forName("org.sqlite.JDBC");
-            connection = DriverManager.getConnection("jdbc:sqlite:db//local_nets_db.db");
+            connection = DriverManager.getConnection("jdbc:sqlite:" + PATH_TO_DB);
         } catch ( Exception e ) {
             System.err.println( e.getClass().getName() + ": " + e.getMessage() );
             System.exit(0);

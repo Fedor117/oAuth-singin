@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -28,6 +29,21 @@ public class RetrievalServlet extends HttpServlet {
         DbOperation operation = new RetrieveOperator();
 
         PrintWriter out = resp.getWriter();
-        out.println(operation.requestToDb(name, null));
+        out.println(
+                "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" +" +
+                        "http://www.w3.org/TR/html4/loose.dtd\">\n" +
+                        "<html> \n" +
+                        "<head> \n" +
+                        "<meta http-equiv=\"Content-Type\" content=\"text/html; " +
+                        "charset=ISO-8859-1\"> \n" +
+                        "<title> Ответ на запрос " + name + " </title> \n" +
+                        "</head> \n" +
+                        "<body> <div align='center'> \n" +
+                        "<style= \"font-size=\"12px\" color='black'\"" + "\">" +
+                        "Запрос: " + name + " <br> " +
+                        "Определение: " + operation.requestToDb(name, null) +
+                        "</font></body> \n" +
+                        "</html>"
+        );
     }
 }
