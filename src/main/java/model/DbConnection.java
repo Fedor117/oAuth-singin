@@ -10,10 +10,7 @@ import java.sql.Statement;
  */
 public class DbConnection {
 
-    public  static Connection   connection;
-    public  static Statement    statement;
-    public  static ResultSet    resultSet;
-
+    public  static           Connection   connection;
     private static volatile  DbConnection instance;
 
     private DbConnection() {
