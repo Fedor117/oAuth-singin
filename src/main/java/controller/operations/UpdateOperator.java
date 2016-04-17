@@ -19,8 +19,10 @@ public class UpdateOperator implements DbOperation {
             statement = connection.createStatement();
             String sql = "UPDATE local_nets SET definition = '" +
                     definition + "' WHERE name='" + name + "';";
-            statement.executeUpdate(sql);
-            connection.commit();
+            int i = statement.executeUpdate(sql);
+            if (i == 0) {
+                return MESSAGE_FAIL;
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }

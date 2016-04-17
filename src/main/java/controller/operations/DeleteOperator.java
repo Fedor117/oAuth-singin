@@ -18,8 +18,10 @@ public class DeleteOperator implements DbOperation {
         try {
             statement = connection.createStatement();
             String sql = "DELETE FROM local_nets WHERE name='" + name + "';";
-            statement.executeUpdate(sql);
-            connection.commit();
+            int i = statement.executeUpdate(sql);
+            if (i == 0) {
+                return MESSAGE_FAIL;
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }

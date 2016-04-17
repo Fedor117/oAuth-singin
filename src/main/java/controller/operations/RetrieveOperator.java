@@ -16,12 +16,13 @@ public class RetrieveOperator implements DbOperation {
 
     public String requestToDb(String name, String definition) {
         Connection connection = DbConnection.connection;
+        definition = MESSAGE_FAIL;
         ResultSet resultSet;
         try {
             statement = connection.createStatement();
             String sql = "SELECT * FROM local_nets WHERE name='" + name + "';";
             resultSet = statement.executeQuery(sql);
-            while(resultSet.next()) {
+            while (resultSet.next()) {
                 definition = resultSet.getString("definition");
             }
             resultSet.close();

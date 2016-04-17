@@ -18,9 +18,11 @@ public class CreateOperator implements DbOperation {
         try {
             statement = connection.createStatement();
             String sql = "INSERT INTO local_nets( name, definition)" +
-                    " VALUES ('" + name +"', '" + definition + "');";
-            statement.executeUpdate(sql);
-            connection.commit();
+                    " VALUES ('" + name + "', '" + definition + "');";
+            int i = statement.executeUpdate(sql);
+            if (i == 0) {
+                return MESSAGE_FAIL;
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
