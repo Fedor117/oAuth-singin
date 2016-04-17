@@ -1,9 +1,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE HTML PUBLIC  "-//W3C//DTD HTML 4.01 Transitional//EN" "www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+    <meta content="JSP-Servlets - aipos lab5" name="twitter:description">
+    <meta name="description" content="JSP-Servlets - aipos lab5">
     <title>
         АИПОС, лабораторная работа №5
     </title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>

@@ -1,3 +1,6 @@
+html, .tabbed {
+    width: 100%;
+}
 body{
     padding     : 1.5em;
     background  : #f8f8f8;
@@ -7,7 +10,6 @@ body{
 
 .tabbed{
     float : left;
-    width : 100%;
 }
 
 .tabbed > input{
@@ -64,4 +66,9 @@ body{
 
 .tabbed > input:not(:checked) + section > div{
     display : none;
+}
+
+.tabbed > input:not(:checked) + section > h1 {
+    opacity: 0.5;
+    background-color: #fafafa;
 }
