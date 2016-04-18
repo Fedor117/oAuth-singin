@@ -2,8 +2,6 @@ package model;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
 
 /**
  * Created by Fedor on 17.04.2016.
@@ -11,7 +9,7 @@ import java.sql.Statement;
 public class DbConnection {
 
     private static final String PATH_TO_DB =
-            "C:\\Users\\Phodor\\workspace\\JSP-Servlets\\db\\local_nets_db.db";
+            "db//users.db";
 
     public  static          Connection   connection;
     private static volatile DbConnection instance;

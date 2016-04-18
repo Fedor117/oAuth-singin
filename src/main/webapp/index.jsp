@@ -1,82 +1,38 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE HTML PUBLIC  "-//W3C//DTD HTML 4.01 Transitional//EN" "www.w3.org/TR/html4/loose.dtd">
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <meta content="JSP-Servlets - aipos lab5" name="twitter:description">
-    <meta name="description" content="JSP-Servlets - aipos lab5">
-    <title>
-        АИПОС, лабораторная работа №5
-    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>JSP Example</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<div class="tabbed">
-    <input name="tabbed" id="tabbed1" type="radio" checked>
-    <section>
-        <h1>
-            <label for="tabbed1">Create</label>
-        </h1>
-        <div>
-            <form action="/creation" method="post">
-                <p><h3>Введите определение</h3>
-                <input type="text" name="name" />
-                <p><h3>Введите описание</h3>
-                <input type="text" name="description" />
-                <p>
-                    <input type="submit" name="Submit" value="Создать новую запись" />
-                </p>
-            </form>
-        </div>
-    </section>
-    <input name="tabbed" id="tabbed2" type="radio">
-    <section>
-        <h1>
-            <label for="tabbed2">Read</label>
-        </h1>
-        <div>
-            <form action="/retrieval" method="get">
-                <p><h3>Введите определение</h3>
-                <input type="text" name="name" />
-                <p>
-                    <input type="submit" name="Submit" value="Получить описание" />
-                </p>
-            </form>
-        </div>
-    </section>
-    <input name="tabbed" id="tabbed3" type="radio">
-    <section>
-        <h1>
-            <label for="tabbed3">Update</label>
-        </h1>
-        <div>
-            <form action="/update" method="post">
-                <p><h3>Введите определение</h3>
-                <input type="text" name="name" />
-                <p><h3>Введите описание</h3>
-                <input type="text" name="description" />
-                <p>
-                    <input type="submit" name="Submit" value="Обновить запись" />
-                </p>
-            </form>
-        </div>
-    </section>
-    <input name="tabbed" id="tabbed4" type="radio">
-    <section>
-        <h1>
-            <label for="tabbed4">Delete</label>
-        </h1>
-        <div>
-            <form action="/deletion" method="post">
-                <p><h3>Введите определение</h3>
-                <input type="text" name="name" />
-                <p>
-                    <input type="submit" name="Submit" value="Удалить запись" />
-                </p>
-            </form>
-        </div>
-    </section>
-</div>
+<form method="post" action="login.jsp">
+    <center>
+        <table border="1" width="30%" cellpadding="3">
+            <thead>
+            <tr>
+                <th colspan="2">Login Here</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>User Name</td>
+                <td><input type="text" name="uname" value="" /></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="pass" value="" /></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Login" /></td>
+                <td><input type="reset" value="Reset" /></td>
+            </tr>
+            </tbody>
+        </table>
+    </center>
+</form>
 </body>
 </html>

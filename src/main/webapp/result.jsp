@@ -11,11 +11,11 @@
 </head>
 <body>
 <div class="answer">
-    <p><span>Запрос:</span> <%=request.getAttribute("type")%> <%=request.getParameter("name")%>
+    <p><span>Пользователь:</span> <%=request.getAttribute("type")%> <%=request.getParameter("name")%>
     </p>
-    <p><span>Ответ на запрос:</span> <%=request.getAttribute("answer")%>
+    <p><span>Залогинен.</span>
     </p>
-    <input type="button" value="Вернуться на страницу запросов" onclick="(function(){window.location='/index.jsp'})()"/>
+    <input type="button" value="Вернуться на страницу авторизации" onclick="(function(){window.location='/'})()"/>
 </div>
 </body>
 </html>
