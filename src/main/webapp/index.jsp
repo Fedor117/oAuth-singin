@@ -4,17 +4,17 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>JSP Example</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 <form method="post" action="login.jsp">
     <center>
-        <table border="1" width="30%" cellpadding="3">
+        <table border="0" width="30%" cellpadding="3">
             <thead>
             <tr>
-                <th colspan="2">Login Here</th>
+                <th colspan="2" align="center">Login Here</th>
             </tr>
             </thead>
             <tbody>
@@ -29,6 +29,17 @@
             <tr>
                 <td><input type="submit" value="Login" /></td>
                 <td><input type="reset" value="Reset" /></td>
+            </tr>
+            <tr>
+                <form action="/facebook-login" method="post">
+                    <button name="facebook"><img src="img/facebook.png"></button>
+                </form>
+                <form action="/twitter-login" method="post">
+                    <button name="twitter"><img src="img/twitter.png"></button>
+                </form>
+                <form action="/google-login" method="post">
+                    <button name="google"><img src="img/google.png"></button>
+                </form>
             </tr>
             </tbody>
         </table>
