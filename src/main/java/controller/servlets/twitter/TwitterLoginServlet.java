@@ -1,4 +1,4 @@
-package controller.servlets;
+package controller.servlets.twitter;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -7,6 +7,6 @@ import javax.servlet.http.HttpServlet;
  * Created by Fedor on 18.04.2016.
  */
 
-@WebServlet("/login")
-public class LoginServlet extends HttpServlet {
+@WebServlet("/twitter-login")
+public class TwitterLoginServlet extends HttpServlet {
 }
