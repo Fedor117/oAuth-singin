@@ -13,5 +13,13 @@
         <filter-name>CharacterEncodingFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
+    <servlet>
+        <servlet-name>facebook_login</servlet-name>
+        <servlet-class>controller.servlets.facebook.FbLoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>facebook_login</servlet-name>
+        <url-pattern>/result.jsp</url-pattern>
+    </servlet-mapping>
 
 </web-app>
