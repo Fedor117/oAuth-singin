@@ -15,7 +15,7 @@ import java.net.URLEncoder;
 public class FbConnection {
     public static final String FB_APP_ID = "1147701885262257";
     public static final String FB_APP_SECRET = "c7573959636deb991e6746b5dfa220f7";
-    public static final String REDIRECT_URI = "http://localhost:8080/oAuth_signin";
+    public static final String REDIRECT_URI = "http://localhost:8080/result.jsp";
 
     static String accessToken  = "";
 

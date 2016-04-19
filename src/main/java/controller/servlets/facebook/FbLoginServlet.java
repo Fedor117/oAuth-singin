@@ -1,7 +1,6 @@
 package controller.servlets.facebook;
 
 import javax.servlet.ServletException;
-import javax.servlet.ServletOutputStream;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -35,11 +34,12 @@ public class FbLoginServlet extends HttpServlet {
         String graph = fbGraph.getFbGraph();
         Map<String, String> fbProfileData = fbGraph.getGraphData(graph);
 
-        ServletOutputStream out = resp.getOutputStream();
-        out.println("<h1>Facebook Login using Java</h1>");
-        out.println("<h2>Application Main Menu</h2>");
-        out.println("<div>Welcome "+fbProfileData.get("first_name"));
-        out.println("<div>Your Email: "+fbProfileData.get("email"));
-        out.println("<div>You are "+fbProfileData.get("gender"));
+        String message = "Hello, ";
+        message.concat(fbProfileData.get("first_name"))
+                .concat(". Your Email: ")
+                .concat(fbProfileData.get("email"));
+
+        req.setAttribute("message", message);
+        req.getRequestDispatcher("/result.jsp").forward(req, resp);
     }
 }

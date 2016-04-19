@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -17,5 +18,8 @@
     </p>
     <input type="button" value="Вернуться на страницу авторизации" onclick="(function(){window.location='/'})()"/>
 </div>
+<c:if test="${not empty message}">
+    <h1>${message}</h1>
+</c:if>
 </body>
 </html>

@@ -12,11 +12,12 @@
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
-<center>
-    <a href="<%=connection.getFbAuthUrl()%>">
-        <div style="margin: 0 auto; background-image: url(img/facebook.png);height: 100px; width: 100px;"></div>
-    </a>
-</center>
+<body style="text-align: center; margin: 0 auto;">
+	<div
+		style="margin: 0 auto; background-image: url(./img/fbloginbckgrnd.jpg); height: 360px; width: 610px;">
+		<a href="<%=connection.getFbAuthUrl()%>"> <img
+			style="margin-top: 138px;" src="./img/facebookloginbutton.png" />
+		</a>
+	</div>
 </body>
 </html>
