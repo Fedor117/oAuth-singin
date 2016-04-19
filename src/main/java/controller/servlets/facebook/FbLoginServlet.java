@@ -19,8 +19,7 @@ public class FbLoginServlet extends HttpServlet {
     private String code;
 
     @Override
-    protected void service(HttpServletRequest req, HttpServletResponse resp)
-            throws ServletException, IOException {
+    protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         code = req.getParameter("code");
 
         if (code == null || code.equals("")) {
@@ -34,10 +33,8 @@ public class FbLoginServlet extends HttpServlet {
         String graph = fbGraph.getFbGraph();
         Map<String, String> fbProfileData = fbGraph.getGraphData(graph);
 
-        String message = "Hello, ";
-        message.concat(fbProfileData.get("first_name"))
-                .concat(". Your Email: ")
-                .concat(fbProfileData.get("email"));
+        String message = "Hello, ".concat(fbProfileData.get("first_name")).concat(". You are ")
+                .concat(fbProfileData.get("gender")).concat(". Your Email: ").concat(fbProfileData.get("email"));
 
         req.setAttribute("message", message);
         req.getRequestDispatcher("/result.jsp").forward(req, resp);

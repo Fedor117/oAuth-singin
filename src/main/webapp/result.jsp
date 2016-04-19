@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title><%=request.getAttribute("type")%> <%=request.getParameter("name")%>
+    <title>Успешная авторизация
     </title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
@@ -12,9 +12,9 @@
 </head>
 <body>
 <div class="answer">
-    <p><span>Пользователь:</span> <%=request.getAttribute("type")%> <%=request.getParameter("name")%>
+    <p><span>Пользователь залогинен.</span>
     </p>
-    <p><span>Залогинен.</span>
+    <p><span><%=request.getAttribute("message")%></span>
     </p>
     <input type="button" value="Вернуться на страницу авторизации" onclick="(function(){window.location='/'})()"/>
 </div>

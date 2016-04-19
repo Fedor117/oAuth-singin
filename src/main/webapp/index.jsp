@@ -1,8 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="controller.servlets.facebook.FbConnection" %>
-<%
-    FbConnection connection = new FbConnection();
-%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -15,7 +12,7 @@
 <body style="text-align: center; margin: 0 auto;">
 	<div
 		style="margin: 0 auto; background-image: url(./img/fbloginbckgrnd.jpg); height: 360px; width: 610px;">
-		<a href="<%=connection.getFbAuthUrl()%>"> <img
+		<a href="<%=FbConnection.getFbAuthUrl()%>"> <img
 			style="margin-top: 138px;" src="./img/facebookloginbutton.png" />
 		</a>
 	</div>
