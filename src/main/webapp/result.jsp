@@ -4,24 +4,22 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>result</title>
+    <title><%=request.getAttribute("type")%> <%=request.getParameter("name")%>
+    </title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 <div class="answer">
-    <p><span>Результат:</span>
-        <%=request.getParameter("facebookId")%>
-        <%=request.getParameter("firstName")%>
-        <%=request.getParameter("middleNames")%>
-        <%=request.getParameter("lastName")%>
-        <%=request.getParameter("email")%>
+    <p><span>Пользователь:</span> <%=request.getAttribute("type")%> <%=request.getParameter("name")%>
     </p>
     <p><span>Залогинен.</span>
     </p>
     <input type="button" value="Вернуться на страницу авторизации" onclick="(function(){window.location='/'})()"/>
 </div>
-
+<c:if test="${not empty message}">
+    <h1>${message}</h1>
+</c:if>
 </body>
 </html>
