@@ -9,17 +9,20 @@
     <link rel="shortcut icon" href="img/yoba.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css">
 </head>
 <body style="background: #000; text-align: center; margin: 0 auto; ">
-<div style="margin: 0 auto; background-image: url(./img/fbloginbckgrnd.jpg); height: 360px; width: 610px;">
+
+<div data-anijs="if: click, do: flipInY animated" style="margin: 0 auto; background-image: url(./img/fbloginbckgrnd.jpg); height: 360px; width: 610px;">
     <a href="<%=FbConnection.getAuthUrl()%>">
         <img style="margin-top: 138px;" src="img/fbloginbutton.png"/>
     </a>
 </div>
-<div style="margin: 0 auto; background-image: url(./img/vkloginbckgrnd.jpg); height: 360px; width: 610px;">
+<div data-anijs="if: mouseover, do: swing animated" style="margin: 0 auto; background-image: url(./img/vkloginbckgrnd.jpg); height: 360px; width: 610px;">
     <a href="<%=VkConnection.getAuthUrl()%>">
         <img style="margin-top: 138px;" src="img/vkloginbutton.png"/>
     </a>
 </div>
+<script src="anijs/anijs-min.js"></script>
 </body>
 </html>
