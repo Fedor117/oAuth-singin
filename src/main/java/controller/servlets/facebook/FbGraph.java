@@ -29,7 +29,7 @@ class FbGraph {
             System.out.println(g);
             URL u = new URL(g);
             URLConnection c = u.openConnection();
-            BufferedReader in = new BufferedReader(new InputStreamReader(c.getInputStream()));
+            BufferedReader in = new BufferedReader(new InputStreamReader(c.getInputStream(), "UTF-8"));
             String inputLine;
             StringBuilder b = new StringBuilder();
             while ((inputLine = in.readLine()) != null) {
@@ -62,5 +62,9 @@ class FbGraph {
             throw new RuntimeException("ERROR in parsing FB graph data. " + e);
         }
         return fbProfile;
+    }
+
+    String getPicture(String userId) {
+        return "https://graph.facebook.com/" + userId + "/picture?type=square&width=100&height=100";
     }
 }

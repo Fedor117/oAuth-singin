@@ -18,7 +18,7 @@ public class FbConnection {
     private final String FB_APP_SECRET = "c7573959636deb991e6746b5dfa220f7";
     private String accessToken = "";
 
-    public static String getFbAuthUrl() {
+    public static String getAuthUrl() {
         String fbLoginUrl = "";
         try {
             fbLoginUrl = "http://www.facebook.com/dialog/oauth?" + "client_id=" + FB_APP_ID + "&redirect_uri=" +

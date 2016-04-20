@@ -36,6 +36,7 @@ public class FbLoginServlet extends HttpServlet {
         String message = "Hello, ".concat(fbProfileData.get("first_name")).concat(". You are ")
                 .concat(fbProfileData.get("gender")).concat(". Your Email: ").concat(fbProfileData.get("email"));
 
+        req.setAttribute("photo", fbGraph.getPicture(fbProfileData.get("id")));
         req.setAttribute("message", message);
         req.getRequestDispatcher("/result.jsp").forward(req, resp);
     }
