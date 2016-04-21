@@ -6,7 +6,7 @@
     <title>Успешная авторизация
     </title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="img/yoba.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
