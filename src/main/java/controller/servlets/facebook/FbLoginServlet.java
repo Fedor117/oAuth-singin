@@ -23,6 +23,7 @@ public class FbLoginServlet extends HttpServlet {
         code = req.getParameter("code");
 
         if (code == null || code.equals("")) {
+            req.getRequestDispatcher("/").forward(req, resp);
             throw new RuntimeException("ERROR");
         }
 
